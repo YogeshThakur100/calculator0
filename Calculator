@@ -1,0 +1,31 @@
+import java.util.*;
+class Calculator {
+    public static void main (String args []) {
+        try (Scanner sc = new Scanner (System.in)) {
+            System.out.println("Enter first value");
+            int a = sc.nextInt();
+            System.out.println("Enter Second value");
+            int b = sc.nextInt();
+
+            System.out.println("Enter Operator");
+            char op = sc.next().charAt(0);
+
+            switch(op) {
+                case '+' : int addition = a + b;
+                System.out.println( "Addition of the operands are : " + addition);
+                break;
+                case '-' : int substraction = a - b;
+                System.out.println("Substraction of the operands are : "+ substraction);
+                break;
+                case '*' : int multiplication = a * b;
+                System.out.println("Multiplication of the operands are : "+ multiplication);
+                break;
+                case '/' : int division = a / b;
+                System.out.println("Division of the operands are : "+ division);
+                break;
+                default  : System.out.println("Invalid Operator"); 
+                break;
+            }
+        }
+    }
+}
